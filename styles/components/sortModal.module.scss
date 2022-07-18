@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  background: $sectionEerieBlack;
+  color: $white;
+  transform: translateY(100%);
+  border-radius: 45px 45px 0px 0px;
+  overflow-y: scroll;
+  transition: all 0.3s;
+  margin-bottom: 48px;
+}
+
+.opened {
+  transform: translateY(0%);
+}

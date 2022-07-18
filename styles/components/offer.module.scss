@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  align-items: baseline;
+  width: max-content;
+
+  .offer {
+    font-weight: $fontweight-extrabold;
+    font-size: $fontsize-xxs;
+    line-height: $lineheight-xxs;
+    color: $captionGreen;
+  }
+}

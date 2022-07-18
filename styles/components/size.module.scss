@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+
+  .default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    background: $backgroundBlack;
+    border-radius: 8px;
+    color: $white;
+  }
+
+  .selected {
+    @extend .default;
+
+    border: 1px solid $primaryBrightGreen;
+    color: $primaryBrightGreen;
+  }
+}

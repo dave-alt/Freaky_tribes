@@ -1,0 +1,95 @@
+@import "../variables.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.container {
+  width: 100%;
+  margin: 8px 0;
+  background-color: $backgroundBlack;
+  overflow: hidden;
+
+  .carouselWrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 0 8px;
+  }
+
+  .productDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100vw + 128px);
+    bottom: 0;
+    width: 100%;
+    height: min-content;
+    background: $sectionEerieBlack;
+    border-radius: 24px 24px 0px 0px;
+    padding: 0px 16px 48px 16px;
+    margin-bottom: 48px;
+
+    .brandName {
+      font-weight: $fontweight-semibold;
+      font-size: $fontsize-xl;
+      line-height: $lineheight-xl;
+      color: $white;
+      margin-top: 16px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    .brandDesc {
+      font-weight: $fontweight-regular;
+      font-size: $fontsize-sm;
+      line-height: $lineheight-sm;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      color: $textGrey;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .costDetailsWrapper {
+      margin-bottom: 24px;
+      padding: 0;
+      width: 70%;
+    }
+
+    .colorsContainerWrapper {
+      @extend .costDetailsWrapper;
+    }
+
+    .sizeCaptionWrapper {
+      @extend .costDetailsWrapper;
+    }
+
+    .longDesc {
+      font-weight: $fontweight-regular;
+      font-size: $fontsize-md;
+      line-height: $lineheight-md;
+      color: $textGrey;
+    }
+  }
+}
+
+.ctaWrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}

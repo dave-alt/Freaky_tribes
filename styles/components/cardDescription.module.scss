@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  background: $backgroundBlack;
+
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+
+    .brandName {
+      font-weight: $fontweight-semibold;
+      font-size: $fontsize-md;
+      line-height: $lineheight-md;
+      color: $white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .brandDesc {
+      font-weight: $fontweight-regular;
+      font-size: $fontsize-xs;
+      line-height: $lineheight-xs;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      color: $textGrey;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .costDetailsWrapper {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

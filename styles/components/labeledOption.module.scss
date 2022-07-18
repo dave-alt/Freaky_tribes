@@ -1,0 +1,49 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+
+  .checkWrapper {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 9px;
+      width: 13px;
+      height: 10px;
+      stroke: $textGrey;
+      stroke-width: 4px;
+      stroke-linecap: round;
+    }
+  }
+
+  .labelWrapper {
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-sm;
+    line-height: $lineheight-sm;
+    user-select: none;
+    color: $textGrey;
+  }
+}
+
+.selected {
+  @extend .container;
+
+  .checkWrapper {
+    @extend .checkWrapper;
+
+    svg {
+      @extend svg;
+      stroke: $white;
+    }
+  }
+
+  .labelWrapper {
+    @extend .labelWrapper;
+    color: $white;
+  }
+}

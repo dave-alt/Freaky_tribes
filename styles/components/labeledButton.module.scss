@@ -1,0 +1,36 @@
+@import "../variables.scss";
+
+.container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  background-color: $backgroundBlack;
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .labelWrapper {
+    margin-left: 4px;
+    color: $white;
+    font-weight: $fontweight-semibold;
+    font-size: $fontsize-md;
+    line-height: $lineheight-md;
+    text-transform: uppercase;
+    user-select: none;
+  }
+}
+
+.container:active {
+  @extend .container;
+  background-color: $buttonGrey;
+}

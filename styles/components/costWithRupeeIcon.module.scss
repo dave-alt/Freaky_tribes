@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0;
+  width: fit-content;
+
+  .rupeeIcon {
+    svg {
+      height: 12px;
+      width: 8px;
+      fill: $white;
+    }
+  }
+
+  .rupeeIconStriked {
+    @extend .rupeeIcon;
+    margin-left: 8px;
+    @extend .strike;
+    svg {
+      height: 9px;
+      width: 6px;
+      margin: 0;
+      fill: $textGrey;
+    }
+  }
+
+  .costWrapper {
+    display: flex;
+    flex-direction: row;
+
+    .cost {
+      font-weight: $fontweight-semibold;
+      font-size: $fontsize-sm;
+      line-height: $lineheight-sm;
+      margin: 0;
+      color: $white;
+    }
+
+    .striked {
+      @extend .cost;
+      @extend .strike;
+      margin-right: 8px;
+      font-weight: $fontweight-regular;
+      font-size: $fontsize-xs;
+      line-height: $lineheight-xs;
+      text-decoration: line-through;
+      color: $textGrey;
+    }
+  }
+}
+
+.strike {
+  background-image: linear-gradient(var($textGrey), var($textGrey));
+  background-repeat: no-repeat;
+  background-size: 150% var($lineheight-sm);
+  background-position: 0 center;
+}

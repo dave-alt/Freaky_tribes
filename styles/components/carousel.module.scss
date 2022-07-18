@@ -1,0 +1,54 @@
+@import "../variables.scss";
+
+.container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  .highlight {
+    img {
+      border-radius: 24px;
+    }
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow-x: auto;
+    margin: 8px 0;
+
+    .thumbnail {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      margin-right: 8px;
+      border-radius: 4px;
+    }
+
+    .overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      pointer-events: none;
+      position: fixed;
+      height: 68px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.5) 0%,
+
+        rgba(255, 255, 255, 0) 50%,
+
+        rgba(0, 0, 0, 0.5) 100%
+      );
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

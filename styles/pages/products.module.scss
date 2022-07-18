@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.container {
+  padding: 40px 16px 48px 16px;
+  margin: 8px 0;
+  background-color: $backgroundBlack;
+
+  .productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 8px;
+    align-items:start;
+    .track1 {
+      grid-column: 1/4;
+
+    }
+
+    .track2 {
+      grid-column: 4/7;
+      
+    }
+
+    .trackFull{
+      grid-column:1/7;
+    }
+
+    
+  }
+}
+
+.floatingButtonWrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.filler{
+ background-color: bisque;     
+ margin-top:18px;
+ border-radius: 24px;
+
+}
